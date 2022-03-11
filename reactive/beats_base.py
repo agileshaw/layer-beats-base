@@ -48,18 +48,18 @@ def cache_remove_data(host_name):
 
 
 @when('logstash.available')
-def cache_logstash_data():
-    cache_data("logstash")
+def cache_logstash_data(logstash):
+    cache_data("logstash", logstash)
 
 
 @when_not('logstash.available')
-def cache_remove_logstash_data(logstash):
+def cache_remove_logstash_data():
     cache_remove_data("logstash")
 
 
 @when('elasticsearch.available')
 def cache_elasticsearch_data(elasticsearch):
-    cache_data("elasticsearch", elasticsearch)
+    cache_data("elasticsearch")
 
 
 @when_not('elasticsearch.available')
