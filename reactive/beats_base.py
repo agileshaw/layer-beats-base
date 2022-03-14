@@ -59,7 +59,7 @@ def cache_remove_logstash_data():
 
 @when('elasticsearch.available')
 def cache_elasticsearch_data(elasticsearch):
-    cache_data("elasticsearch")
+    cache_data("elasticsearch", elasticsearch)
 
 
 @when_not('elasticsearch.available')
